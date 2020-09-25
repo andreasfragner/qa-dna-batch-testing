@@ -57,6 +57,9 @@ def analyze_matrix(matrix: np.ndarray, min_size: int = 2) -> Tuple:
     tuple
         (total number of positive cells, number of clusters, size of largest cluster)
     """
+    if matrix.size == 0:
+        return (0, 0, 0)
+
     matrix = np.nan_to_num(matrix, 0)
     structure = ndimage.generate_binary_structure(2, 1)
 
@@ -146,7 +149,7 @@ class Simulator:
             np.random.seed(seed)
 
         self.logger.info(
-            "Simulating %i microplates with shape %s and %i control wells per plate",
+            "Simulating %i microplates with shape %s and %i control wells",
             self.microplates,
             self.shape,
             self.controls,

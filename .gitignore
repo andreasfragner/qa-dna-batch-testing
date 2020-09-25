@@ -153,3 +153,4 @@ docs/build/
 .ipython/**/security
 .ipython/profile_default
 
+settings.anaconda
