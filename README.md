@@ -2,7 +2,7 @@
 
 Overview
 --------
-A python simulator test result distributions of microplate assays, based on Ref. [1].
+A python simulator for test result distributions of microplate assays, based on Ref. [1].
 
 Usage
 -----
